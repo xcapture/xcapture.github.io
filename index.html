@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-Z53Z9PX0CL"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-Z53Z9PX0CL');
+    </script>
+    <title>X-Capture: An Open-Source Portable Device for Multi-Sensory Learning</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="./style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400&family=Roboto:wght@300;400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.1.1/css/all.css" crossorigin="anonymous">
+</head>
+
+<body class="light">
+    <div id="header">
+        <a class="header-title" href="./">X-Capture</a>
+        <div class="header-links">
+            <a class="header-link" href="#abstract">ABSTRACT</a>
+            <a class="header-link" href="#data">DATA</a>
+            <a class="header-link" href="#hardware">HARDWARE</a>
+            <a class="header-link" href="#video">VIDEO</a>
+            <a class="header-link" href="#bibtex">BIBTEX</a>
+        </div>
+        <div id="color-mode-wrap">
+            <div id="color-light" class="color-mode">
+                <i class="color-mode-icon fa-regular fa-sun"></i>
+                <span>Light</span>
+            </div>
+            <div id="color-dark" class="color-mode">
+                <i class="color-mode-icon fa-regular fa-moon"></i>
+                <span>Dark</span>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <h1>X-Capture: An Open-Source Portable Device for Multi-Sensory Learning</h1>
+        <!-- <h3>arXiv Preprint</h3> -->
+        <div class="authors">
+            <div class="author">
+                <div class="author-name">
+                    <a href="https://samuelpclarke.com/">Samuel Clarke</a>
+                    <!-- <div class="author-uni">Stanford</div> -->
+                </div>
+            </div>
+            <div class="author">
+                <div class="author-name">
+                    <a href="https://studentlearning.stanford.edu/people/suzannah-wistreich">Suzannah Wistreich</a>
+                </div>
+            </div>
+            <div class="author">
+                <div class="author-name">
+                    <a href="https://yanjieze.com/">Yanjie Ze</a>
+                </div>
+            </div>
+            <div class="author">
+                <div class="author-name">
+                    <a href="https://jiajunwu.com/">Jiajun Wu</a>
+                </div>
+            </div>
+        </div>
+        <div class="affiliation">
+            Stanford University
+        </div>
+        <div class="links">
+            <div class="link">
+                <a href="https://arxiv.org/pdf/2306.09944.pdf" target="_blank" rel="noopener noreferrer">
+                <i class="link-icon fa-solid fa-file-lines"></i>
+                <div class="link-text">paper</div>
+                </a>
+            </div>
+            <div class="link">
+                <a href="https://github.com/samuel-clarke/RealImpact" target="_blank" rel="noopener noreferrer">
+                <i class="link-icon fa-brands fa-github"></i>
+                <div class="link-text">code</div>
+                </a>
+            </div>
+            <!-- <div class="link">
+                <a href="RealImpact_appendix.pdf" target="_blank" rel="noopener noreferrer">
+                <i class="link-icon fa-solid fa-file-lines"></i>
+                <div class="link-text">appendix</div>
+                </a>
+            </div> -->
+        </div>
+        <div class="section" id="abstract">
+            <h2 class="section-title">Abstract</h2>
+            <p class="abstract-text">
+                Understanding objects through multiple sensory modalities is fundamental to human perception, 
+                enabling cross-sensory integration and richer comprehension. For AI and robotic systems to 
+                replicate this ability, access to diverse, high-quality multi-sensory data is critical. 
+                Existing datasets are often limited by their focus on controlled environments, simulated 
+                objects, or restricted modality pairings. We introduce X-Capture, <strong>an open-source, portable, and 
+                cost-effective device</strong> for real-world multi-sensory data collection, <strong>capable of capturing 
+                correlated RGBD images, tactile readings, and impact audio.</strong>
+                With a <strong>build cost under $1,000, </strong>
+                X-Capture democratizes the creation of multi-sensory datasets, requiring only consumer-grade 
+                tools for assembly.
+                Using X-Capture, we curate a sample <strong>dataset of 3,000 total points on 500 
+                everyday objects from diverse, real-world environments,</strong> offering both richness and variety. 
+                Our experiments demonstrate the value of both the quantity and the sensory breadth of our data 
+                for both pretraining and fine-tuning multi-modal representations for object-centric tasks such 
+                as cross-sensory retrieval and reconstruction. X-Capture lays the groundwork for advancing 
+                human-like sensory representations in AI, emphasizing scalability, accessibility, and 
+                real-world applicability.
+            </p>
+        </div>
+        <div class="section" id="demo">
+            <h2 class="section-title">Sound Field Demo</h2>
+            <div class="demo-text">
+                <i class="demo-icon fa-solid fa-music"></i>
+                <span>Click on any of the highlighted microphone locations (yellow) to hear an example
+                    sound</span>
+                <i class="demo-icon fa-solid fa-music"></i>
+            </div>
+            <div class="demo-wrap">
+                <div>
+                    <img class="demo-img" id="demo-img-0" src="./soundfield/base_smoothed.png" width="560" />
+                    <img class="demo-img" id="demo-img-1" src="./soundfield/ortho_FINAL_0.png" width="560" />
+                    <img class="demo-img" id="demo-img-2" src="./soundfield/ortho_FINAL_2.png" width="560" />
+                    <img class="demo-img" id="demo-img-3" src="./soundfield/ortho_FINAL_3.png" width="560" />
+                    <img class="demo-img" id="demo-img-4" src="./soundfield/ortho_FINAL_4.png" width="560" />
+                    <img class="demo-img" id="demo-img-5" src="./soundfield/ortho_FINAL_1.png" width="560" />
+                    <div id="demo-label"></div>
+                </div>
+                <div class="audio-wrap">
+                    <audio preload="auto" id="audio-1" src="./soundfield/deconvolved0.wav"></audio>
+                    <audio preload="auto" id="audio-2" src="./soundfield/deconvolved1.wav"></audio>
+                    <audio preload="auto" id="audio-3" src="./soundfield/deconvolved2.wav"></audio>
+                    <audio preload="auto" id="audio-4" src="./soundfield/deconvolved3.wav"></audio>
+                    <audio preload="auto" id="audio-5" src="./soundfield/deconvolved4.wav"></audio>
+                </div>
+            </div>
+        </div>
+        <div class="section" id="data-collection">
+            <h2 class="section-title">Hardware</h2>
+            <div class="img-container-right">
+                <img height="300" class="gif" src="./gifs/hammer_swing_large.gif" />
+            </div>
+            <p class="abstract-text">
+                We use custom mechanism to repeatably automate flicking an impact hammer at the object with minimal noise (above).
+                We strike the object repeatedly at the same vertex, moving a stack of 15 measurement microphones on a gantry between strikes to 10 azimuth angles and 4 distances per angle, for a total of 600 distinct microphone
+                locations in the sound field of the object's impact sound (below).
+            </p>
+            <div class="img-container">
+                <img height="450" class="gif" src="./gifs/gantry100x_clean_medium.gif" />
+                <div class="bottom-right">100x</div>
+            </div>
+        </div>
+        <div class="section" id="video">
+            <h2 class="section-title">Video</h2>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/OeZMeze-oIs"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen class="video"></iframe>
+        </div>
+        
+        <div class="section" id="bibtex">
+            <h2 class="section-title">BibTex</h2>
+            <pre id="citation">@inproceedings{clarke2023realimpact,
+    title={RealImpact: A Dataset of Impact Sound Fields for Real Objects},
+    author={Samuel Clarke and Ruohan Gao and Mason Wang and Mark Rau and Julia Xu and Jui-Hsien Wang and Doug L. James and Jiajun Wu},
+    booktitle={Proceedings of the IEEE International Conference on Computer Vision and Pattern Recognition},
+    year={2023}
+}</pre>
+        </div>
+        <div id="footer">
+            <div class="footer-text">Template created by <a href="https://github.com/ryan-d-williams"
+                    class="template-creator">Ryan Williams</a></div>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById("color-mode-wrap").addEventListener("click", () => {
+            document.body.classList.toggle("light");
+            document.body.classList.toggle("dark");
+        })
+
+        const img_ids = [0, 1, 2, 3, 4, 5]
+        const hover_areas = [{
+            xmin: 35,
+            xmax: 50,
+            ymin: 50,
+            ymax: 60,
+            img_id: 1,
+            audio_label: "X: -56.3cm  | Y: 4.3cm | Z: -39.0cm"
+        }, {
+            xmin: 55,
+            xmax: 65,
+            ymin: 1,
+            ymax: 10,
+            img_id: 2,
+            audio_label: "X: -17.1cm | Y: 121.9cm | Z: 91.0cm"
+        }, {
+            xmin: 60,
+            xmax: 70,
+            ymin: 45,
+            ymax: 55,
+            img_id: 3,
+            audio_label: "X: 25.6cm | Y: 120.4cm | Z: -39.0cm"
+        }, {
+            xmin: 32,
+            xmax: 42,
+            ymin: 17,
+            ymax: 30,
+            img_id: 4,
+            audio_label: "X: -82.8cm | Y: 34.7cm | Z: 52.0cm"
+        }, {
+            xmin: 50,
+            xmax: 55,
+            ymin: 20,
+            ymax: 30,
+            img_id: 5,
+            audio_label: "X: 15.3cm | Y: 17.7cm | Z: 65.0cm"
+        }];
+        let display_img = hover_areas[0].img_id;
+        let audio_label = "";
+
+        const getHoverArea = (e) => {
+            let rect = e.target.getBoundingClientRect();
+            let x = (e.clientX - rect.left) / rect.width * 100;
+            let y = (e.clientY - rect.top) / rect.height * 100;
+
+            let selected_area = 0;
+            audio_label = "";
+
+            hover_areas.forEach(hover_area => {
+                if (x >= hover_area.xmin && x <= hover_area.xmax && y >= hover_area.ymin && y <= hover_area.ymax) {
+                    selected_area = hover_area.img_id;
+                    audio_label = hover_area.audio_label;
+                }
+            });
+
+            return selected_area;
+        }
+
+        const hoverfn = (e) => {
+            let selected_area = getHoverArea(e);
+
+            if (selected_area !== display_img) {
+                img_ids.forEach(img_id => {
+                    document.getElementById(`demo-img-${img_id}`).style.display = "none";
+                })
+                document.getElementById(`demo-img-${selected_area}`).style.display = "inline-block";
+                document.getElementById("demo-label").innerText = audio_label;
+
+                display_img = selected_area;
+
+                if (selected_area > 0) {
+                    document.body.style.cursor = "pointer";
+                } else {
+                    document.body.style.cursor = "auto";
+                }
+            }
+        }
+
+        const clickfn = (e) => {
+            let selected_area = getHoverArea(e);
+
+            if (selected_area > 0) {
+                document.getElementById(`audio-${selected_area}`).play();
+            }
+        }
+
+        img_ids.forEach(img_id => {
+            document.getElementById(`demo-img-${img_id}`).addEventListener('mousemove', hoverfn);
+            document.getElementById(`demo-img-${img_id}`).addEventListener('click', clickfn);
+        });
+
+    </script>
+</body>
+
+</html>
