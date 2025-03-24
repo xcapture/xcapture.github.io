@@ -376,7 +376,7 @@ h3 {
     user-select: none;
 }
 
-.demo-img-overlay.selected{
+.demo-img-overlay.selected {
     opacity: 1;
 }
 
@@ -443,7 +443,7 @@ h3 {
     background-color: rgb(62, 62, 200);
 }
 
-.demo-rgb-inline-text{
+.demo-rgb-inline-text {
     color: rgb(62, 62, 200);
 }
 
@@ -451,7 +451,7 @@ h3 {
     background-color: rgb(40, 151, 40);
 }
 
-.demo-touch-inline-text{
+.demo-touch-inline-text {
     color: rgb(40, 151, 40);
 }
 
@@ -459,7 +459,7 @@ h3 {
     background-color: rgb(186, 53, 53);
 }
 
-.demo-audio-inline-text{
+.demo-audio-inline-text {
     color: rgb(186, 53, 53);
 }
 
@@ -467,7 +467,7 @@ h3 {
     background-color: rgb(200, 146, 64);
 }
 
-.demo-depth-inline-text{
+.demo-depth-inline-text {
     color: rgb(200, 146, 64);
 }
 
@@ -480,17 +480,17 @@ h3 {
     transition: left 0.3s ease;
 }
 
-.bar-short{
+.bar-short {
     width: calc(100% / 6);
     background-color: #e66363;
 }
 
-.bar-long{
+.bar-long {
     width: 20%;
     background-color: #6363e6;
 }
 
-#demo-selected-rgb-images>img{
+#demo-selected-rgb-images>img {
     cursor: pointer;
 }
 
@@ -542,7 +542,11 @@ h3 {
     display: block;
 }
 
-.demo-img-set-1, .demo-img-set-2, .demo-img-set-3, .demo-img-set-4, .demo-img-set-5 {
+.demo-img-set-1,
+.demo-img-set-2,
+.demo-img-set-3,
+.demo-img-set-4,
+.demo-img-set-5 {
     display: none;
 }
 
@@ -552,7 +556,7 @@ h3 {
     position: relative;
 }
 
-#demo-selected-rgb-images>img{
+#demo-selected-rgb-images>img {
     max-width: calc(100% / 6);
     display: inline-block;
     box-sizing: border-box;
@@ -563,6 +567,49 @@ h3 {
 #demo-selected-rgb-images>img:last-child {
     padding-right: 0;
 }
+
+.demo-img-wrap:hover > .target-rectangle, .demo-img-wrap:hover > .target-label {
+    opacity: 0;
+}
+
+.target-rectangle {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 100px;
+    height: 50px;
+    transform: translate(-50%, -50%);
+    border: 2px solid #fff;
+    box-sizing: border-box;
+    opacity: 1;
+    transition: opacity 0.3s;
+  }
+
+  .center-dot {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 4px;
+    height: 4px;
+    background: #fff;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .target-label {
+    position: absolute;
+    left: 50%;
+    top: calc(50% - 50px);
+    transform: translateX(-50%);
+    background: rgb(238, 238, 238);
+    color: rgb(23, 23, 23);
+    padding: 2px 6px;
+    font-size: 14px;
+    border-radius: 3px;
+    white-space: nowrap;
+    opacity: 1;
+    transition: opacity 0.3s;
+  }
 
 @media screen and (max-width: 800px) {
     .header-links {

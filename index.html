@@ -160,13 +160,18 @@
                         <span>Check out the <span class="demo-rgb-inline-text">rgb</span>, <span
                                 class="demo-touch-inline-text">touch</span>, <span
                                 class="demo-depth-inline-text">depth</span>, and <span
-                                class="demo-audio-inline-text">audio</span> data available for this collection point.</span>
+                                class="demo-audio-inline-text">audio</span> data available for this collection
+                            point.</span>
                     </div>
                     <div>
                         <div class="demo-selected-row">
                             <div class="demo-img-wrap">
                                 <img id="demo-selected-rgb" src="./examples/dataset/00071/000/000_rgb.png" />
                                 <div class="demo-rgb-text demo-text-overlay">rgb</div>
+                                <div class="target-rectangle">
+                                    <div class="center-dot"></div>
+                                </div>
+                                <div class="target-label">target point</div>
                             </div>
                             <div class="demo-img-wrap">
                                 <img id="demo-selected-touch" src="./examples/dataset/00071/000/000_10N_tactile.png" />
@@ -177,9 +182,13 @@
                             <div class="demo-img-wrap">
                                 <img id="demo-selected-depth" src="./examples/dataset/00071/000/000_depth.png" />
                                 <div class="demo-depth-text demo-text-overlay">depth</div>
+                                <div class="target-rectangle">
+                                    <div class="center-dot"></div>
+                                </div>
+                                <div class="target-label">target point</div>
                             </div>
                             <div class="demo-img-wrap">
-                                <video controls loop id="demo-selected-audio"
+                                <video controls id="demo-selected-audio"
                                     src="./examples/dataset/00071/000/scp.mp4"></video>
                                 <div class="demo-audio-text demo-text-overlay">audio</div>
                             </div>
@@ -287,8 +296,8 @@
             document.getElementById("demo-selected-touch").src = `./examples/dataset/${obj_data[selected_obj_id].folder_id}/00${data_point_id}/00${data_point_id}_10N_tactile.png`;
             document.getElementById("demo-selected-depth").src = `./examples/dataset/${obj_data[selected_obj_id].folder_id}/00${data_point_id}/00${data_point_id}_depth.png`;
             document.getElementById("demo-selected-audio").src = `./examples/dataset/${obj_data[selected_obj_id].folder_id}/00${data_point_id}/scp.mp4`;
-        
-            bar_short.style.left = (data_point_id * (100/6)) + '%';
+
+            bar_short.style.left = (data_point_id * (100 / 6)) + '%';
         }
 
         Array.from(document.getElementById('demo-selected-rgb-images').querySelectorAll("img")).forEach((img_el, img_ndx) => {
