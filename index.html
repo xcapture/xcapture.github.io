@@ -5,11 +5,11 @@
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-Z53Z9PX0CL"></script>
     <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
 
-    gtag('config', 'G-Z53Z9PX0CL');
+        gtag('config', 'G-Z53Z9PX0CL');
     </script>
     <title>X-Capture: An Open-Source Portable Device for Multi-Sensory Learning</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -74,14 +74,14 @@
         <div class="links">
             <div class="link">
                 <a href="https://arxiv.org/pdf/2306.09944.pdf" target="_blank" rel="noopener noreferrer">
-                <i class="link-icon fa-solid fa-file-lines"></i>
-                <div class="link-text">paper</div>
+                    <i class="link-icon fa-solid fa-file-lines"></i>
+                    <div class="link-text">paper</div>
                 </a>
             </div>
             <div class="link">
                 <a href="https://github.com/samuel-clarke/RealImpact" target="_blank" rel="noopener noreferrer">
-                <i class="link-icon fa-brands fa-github"></i>
-                <div class="link-text">code</div>
+                    <i class="link-icon fa-brands fa-github"></i>
+                    <div class="link-text">code</div>
                 </a>
             </div>
             <!-- <div class="link">
@@ -94,49 +94,97 @@
         <div class="section" id="abstract">
             <h2 class="section-title">Abstract</h2>
             <p class="abstract-text">
-                Understanding objects through multiple sensory modalities is fundamental to human perception, 
-                enabling cross-sensory integration and richer comprehension. For AI and robotic systems to 
-                replicate this ability, access to diverse, high-quality multi-sensory data is critical. 
-                Existing datasets are often limited by their focus on controlled environments, simulated 
-                objects, or restricted modality pairings. We introduce X-Capture, <strong>an open-source, portable, and 
-                cost-effective device</strong> for real-world multi-sensory data collection, <strong>capable of capturing 
-                correlated RGBD images, tactile readings, and impact audio.</strong>
+                Understanding objects through multiple sensory modalities is fundamental to human perception,
+                enabling cross-sensory integration and richer comprehension. For AI and robotic systems to
+                replicate this ability, access to diverse, high-quality multi-sensory data is critical.
+                Existing datasets are often limited by their focus on controlled environments, simulated
+                objects, or restricted modality pairings. We introduce X-Capture, <strong>an open-source, portable, and
+                    cost-effective device</strong> for real-world multi-sensory data collection, <strong>capable of
+                    capturing
+                    correlated RGBD images, tactile readings, and impact audio.</strong>
                 With a <strong>build cost under $1,000, </strong>
-                X-Capture democratizes the creation of multi-sensory datasets, requiring only consumer-grade 
+                X-Capture democratizes the creation of multi-sensory datasets, requiring only consumer-grade
                 tools for assembly.
-                Using X-Capture, we curate a sample <strong>dataset of 3,000 total points on 500 
-                everyday objects from diverse, real-world environments,</strong> offering both richness and variety. 
-                Our experiments demonstrate the value of both the quantity and the sensory breadth of our data 
-                for both pretraining and fine-tuning multi-modal representations for object-centric tasks such 
-                as cross-sensory retrieval and reconstruction. X-Capture lays the groundwork for advancing 
-                human-like sensory representations in AI, emphasizing scalability, accessibility, and 
+                Using X-Capture, we curate a sample <strong>dataset of 3,000 total points on 500
+                    everyday objects from diverse, real-world environments,</strong> offering both richness and variety.
+                Our experiments demonstrate the value of both the quantity and the sensory breadth of our data
+                for both pretraining and fine-tuning multi-modal representations for object-centric tasks such
+                as cross-sensory retrieval and reconstruction. X-Capture lays the groundwork for advancing
+                human-like sensory representations in AI, emphasizing scalability, accessibility, and
                 real-world applicability.
             </p>
         </div>
         <div class="section" id="demo">
-            <h2 class="section-title">Sound Field Demo</h2>
+            <h2 class="section-title">X-Capture Data Collection Demo</h2>
             <div class="demo-text">
-                <i class="demo-icon fa-solid fa-music"></i>
-                <span>Click on any of the highlighted microphone locations (yellow) to hear an example
-                    sound</span>
-                <i class="demo-icon fa-solid fa-music"></i>
+                <span>Select an object to see examples of the data collected.</span>
             </div>
             <div class="demo-wrap">
-                <div>
-                    <img class="demo-img" id="demo-img-0" src="./soundfield/base_smoothed.png" width="560" />
-                    <img class="demo-img" id="demo-img-1" src="./soundfield/ortho_FINAL_0.png" width="560" />
-                    <img class="demo-img" id="demo-img-2" src="./soundfield/ortho_FINAL_2.png" width="560" />
-                    <img class="demo-img" id="demo-img-3" src="./soundfield/ortho_FINAL_3.png" width="560" />
-                    <img class="demo-img" id="demo-img-4" src="./soundfield/ortho_FINAL_4.png" width="560" />
-                    <img class="demo-img" id="demo-img-5" src="./soundfield/ortho_FINAL_1.png" width="560" />
-                    <div id="demo-label"></div>
+                <div class="demo-obj-wrap">
+                    <div class="demo-img-obj-wrap" id="obj-wrap-0">
+                        <img class="demo-img-obj" src="./examples/dataset/00071/000/000_rgb.png" />
+                        <div class="demo-img-overlay selected">thing</div>
+                    </div>
+                    <div class="demo-img-obj-wrap" id="obj-wrap-1">
+                        <img class="demo-img-obj" src="./examples/dataset/00360/000/000_rgb.png" />
+                        <div class="demo-img-overlay">speaker</div>
+                    </div>
+                    <div class="demo-img-obj-wrap" id="obj-wrap-2">
+                        <img class="demo-img-obj" src="./examples/dataset/00420/000/000_rgb.png" />
+                        <div class="demo-img-overlay">knob</div>
+                    </div>
+                    <div class="demo-img-obj-wrap" id="obj-wrap-3">
+                        <img class="demo-img-obj" src="./examples/dataset/00454/000/000_rgb.png" />
+                        <div class="demo-img-overlay">cup</div>
+                    </div>
+                    <div class="demo-img-obj-wrap" id="obj-wrap-4">
+                        <img class="demo-img-obj" src="./examples/dataset/00482/000/000_rgb.png" />
+                        <div class="demo-img-overlay">bowl</div>
+                    </div>
+                    <div class="bar bar-long"></div>
                 </div>
-                <div class="audio-wrap">
-                    <audio preload="auto" id="audio-1" src="./soundfield/deconvolved0.wav"></audio>
-                    <audio preload="auto" id="audio-2" src="./soundfield/deconvolved1.wav"></audio>
-                    <audio preload="auto" id="audio-3" src="./soundfield/deconvolved2.wav"></audio>
-                    <audio preload="auto" id="audio-4" src="./soundfield/deconvolved3.wav"></audio>
-                    <audio preload="auto" id="audio-5" src="./soundfield/deconvolved4.wav"></audio>
+                <div class="demo-text">
+                    <span>Select one of the six collection points for this object.</span>
+                </div>
+                <div class="demo-selected-obj-wrap">
+                    <div id="demo-selected-rgb-images">
+                        <img src="./examples/dataset/00071/000/000_rgb.png" />
+                        <img src="./examples/dataset/00071/001/001_rgb.png" />
+                        <img src="./examples/dataset/00071/002/002_rgb.png" />
+                        <img src="./examples/dataset/00071/003/003_rgb.png" />
+                        <img src="./examples/dataset/00071/004/004_rgb.png" />
+                        <img src="./examples/dataset/00071/005/005_rgb.png" />
+                        <div class="bar bar-short"></div>
+                    </div>
+                    <div class="demo-text">
+                        <span>Check out the <span class="demo-rgb-inline-text">rgb</span>, <span
+                                class="demo-touch-inline-text">touch</span>, <span
+                                class="demo-depth-inline-text">depth</span>, and <span
+                                class="demo-audio-inline-text">audio</span> data available for this collection point.</span>
+                    </div>
+                    <div>
+                        <div class="demo-selected-row">
+                            <div class="demo-img-wrap">
+                                <img id="demo-selected-rgb" src="./examples/dataset/00071/000/000_rgb.png" />
+                                <div class="demo-rgb-text demo-text-overlay">rgb</div>
+                            </div>
+                            <div class="demo-img-wrap">
+                                <img id="demo-selected-touch" src="./examples/dataset/00071/000/000_10N_tactile.png" />
+                                <div class="demo-touch-text demo-text-overlay">touch</div>
+                            </div>
+                        </div>
+                        <div class="demo-selected-row">
+                            <div class="demo-img-wrap">
+                                <img id="demo-selected-depth" src="./examples/dataset/00071/000/000_depth.png" />
+                                <div class="demo-depth-text demo-text-overlay">depth</div>
+                            </div>
+                            <div class="demo-img-wrap">
+                                <video controls loop id="demo-selected-audio"
+                                    src="./examples/dataset/00071/000/scp.mp4"></video>
+                                <div class="demo-audio-text demo-text-overlay">audio</div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -146,8 +194,11 @@
                 <img height="300" class="gif" src="./gifs/hammer_swing_large.gif" />
             </div>
             <p class="abstract-text">
-                We use custom mechanism to repeatably automate flicking an impact hammer at the object with minimal noise (above).
-                We strike the object repeatedly at the same vertex, moving a stack of 15 measurement microphones on a gantry between strikes to 10 azimuth angles and 4 distances per angle, for a total of 600 distinct microphone
+                We use custom mechanism to repeatably automate flicking an impact hammer at the object with minimal
+                noise (above).
+                We strike the object repeatedly at the same vertex, moving a stack of 15 measurement microphones on a
+                gantry between strikes to 10 azimuth angles and 4 distances per angle, for a total of 600 distinct
+                microphone
                 locations in the sound field of the object's impact sound (below).
             </p>
             <div class="img-container">
@@ -162,7 +213,7 @@
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 allowfullscreen class="video"></iframe>
         </div>
-        
+
         <div class="section" id="bibtex">
             <h2 class="section-title">BibTex</h2>
             <pre id="citation">@inproceedings{clarke2023realimpact,
@@ -184,96 +235,69 @@
             document.body.classList.toggle("dark");
         })
 
-        const img_ids = [0, 1, 2, 3, 4, 5]
-        const hover_areas = [{
-            xmin: 35,
-            xmax: 50,
-            ymin: 50,
-            ymax: 60,
-            img_id: 1,
-            audio_label: "X: -56.3cm  | Y: 4.3cm | Z: -39.0cm"
-        }, {
-            xmin: 55,
-            xmax: 65,
-            ymin: 1,
-            ymax: 10,
-            img_id: 2,
-            audio_label: "X: -17.1cm | Y: 121.9cm | Z: 91.0cm"
-        }, {
-            xmin: 60,
-            xmax: 70,
-            ymin: 45,
-            ymax: 55,
-            img_id: 3,
-            audio_label: "X: 25.6cm | Y: 120.4cm | Z: -39.0cm"
-        }, {
-            xmin: 32,
-            xmax: 42,
-            ymin: 17,
-            ymax: 30,
-            img_id: 4,
-            audio_label: "X: -82.8cm | Y: 34.7cm | Z: 52.0cm"
-        }, {
-            xmin: 50,
-            xmax: 55,
-            ymin: 20,
-            ymax: 30,
-            img_id: 5,
-            audio_label: "X: 15.3cm | Y: 17.7cm | Z: 65.0cm"
-        }];
-        let display_img = hover_areas[0].img_id;
-        let audio_label = "";
+        const img_ids = [0, 1, 2, 3, 4]
 
-        const getHoverArea = (e) => {
-            let rect = e.target.getBoundingClientRect();
-            let x = (e.clientX - rect.left) / rect.width * 100;
-            let y = (e.clientY - rect.top) / rect.height * 100;
+        const obj_data = [{
+            folder_id: "00071"
+        }, {
+            folder_id: "00360"
+        }, {
+            folder_id: "00420"
+        }, {
+            folder_id: "00454"
+        }, {
+            folder_id: "00482"
+        }]
 
-            let selected_area = 0;
-            audio_label = "";
+        let selected_obj_id = 0;
 
-            hover_areas.forEach(hover_area => {
-                if (x >= hover_area.xmin && x <= hover_area.xmax && y >= hover_area.ymin && y <= hover_area.ymax) {
-                    selected_area = hover_area.img_id;
-                    audio_label = hover_area.audio_label;
-                }
+        const container = document.getElementsByClassName('demo-wrap')[0];
+        const bar_long = container.querySelector('.bar.bar-long');
+        const bar_short = container.querySelector('.bar.bar-short');
+        const wrappers = container.querySelectorAll('.demo-img-obj-wrap');
+
+        wrappers.forEach((wrapper, index) => {
+            wrapper.addEventListener('click', () => {
+                wrappers.forEach(w => {
+                    w.querySelector('.demo-img-overlay').classList.remove('selected');
+                });
+
+                bar_long.style.left = (index * 20) + '%';
+                wrapper.querySelector('.demo-img-overlay').classList.add('selected');
+
+                bar_short.style.left = '0%';
+            });
+        });
+
+        const objClickedFn = (selected_obj, e) => {
+            selected_obj_id = selected_obj;
+
+            Array.from(document.getElementById('demo-selected-rgb-images').querySelectorAll("img")).forEach((img_el, img_ndx) => {
+                img_el.src = `./examples/dataset/${obj_data[selected_obj_id].folder_id}/00${img_ndx}/00${img_ndx}_rgb.png`;
             });
 
-            return selected_area;
+            document.getElementById("demo-selected-rgb").src = `./examples/dataset/${obj_data[selected_obj_id].folder_id}/000/000_rgb.png`;
+            document.getElementById("demo-selected-touch").src = `./examples/dataset/${obj_data[selected_obj_id].folder_id}/000/000_10N_tactile.png`;
+            document.getElementById("demo-selected-depth").src = `./examples/dataset/${obj_data[selected_obj_id].folder_id}/000/000_depth.png`;
+            document.getElementById("demo-selected-audio").src = `./examples/dataset/${obj_data[selected_obj_id].folder_id}/000/scp.mp4`;
         }
 
-        const hoverfn = (e) => {
-            let selected_area = getHoverArea(e);
-
-            if (selected_area !== display_img) {
-                img_ids.forEach(img_id => {
-                    document.getElementById(`demo-img-${img_id}`).style.display = "none";
-                })
-                document.getElementById(`demo-img-${selected_area}`).style.display = "inline-block";
-                document.getElementById("demo-label").innerText = audio_label;
-
-                display_img = selected_area;
-
-                if (selected_area > 0) {
-                    document.body.style.cursor = "pointer";
-                } else {
-                    document.body.style.cursor = "auto";
-                }
-            }
+        const dataPointClickedFn = (data_point_id, e) => {
+            document.getElementById("demo-selected-rgb").src = `./examples/dataset/${obj_data[selected_obj_id].folder_id}/00${data_point_id}/00${data_point_id}_rgb.png`;
+            document.getElementById("demo-selected-touch").src = `./examples/dataset/${obj_data[selected_obj_id].folder_id}/00${data_point_id}/00${data_point_id}_10N_tactile.png`;
+            document.getElementById("demo-selected-depth").src = `./examples/dataset/${obj_data[selected_obj_id].folder_id}/00${data_point_id}/00${data_point_id}_depth.png`;
+            document.getElementById("demo-selected-audio").src = `./examples/dataset/${obj_data[selected_obj_id].folder_id}/00${data_point_id}/scp.mp4`;
+        
+            bar_short.style.left = (data_point_id * (100/6)) + '%';
         }
 
-        const clickfn = (e) => {
-            let selected_area = getHoverArea(e);
-
-            if (selected_area > 0) {
-                document.getElementById(`audio-${selected_area}`).play();
-            }
-        }
+        Array.from(document.getElementById('demo-selected-rgb-images').querySelectorAll("img")).forEach((img_el, img_ndx) => {
+            img_el.addEventListener('click', dataPointClickedFn.bind(null, img_ndx));
+        });
 
         img_ids.forEach(img_id => {
-            document.getElementById(`demo-img-${img_id}`).addEventListener('mousemove', hoverfn);
-            document.getElementById(`demo-img-${img_id}`).addEventListener('click', clickfn);
-        });
+            document.getElementById(`obj-wrap-${img_id}`).addEventListener('click', objClickedFn.bind(null, img_id));
+        })
 
     </script>
 </body>
