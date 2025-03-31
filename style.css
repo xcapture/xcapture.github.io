@@ -576,8 +576,8 @@ h3 {
     position: absolute;
     left: 50%;
     top: 50%;
-    width: 100px;
-    height: 50px;
+    width: 30px;
+    height: 25px;
     transform: translate(-50%, -50%);
     border: 2px solid #fff;
     box-sizing: border-box;
