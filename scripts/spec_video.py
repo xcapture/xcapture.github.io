@@ -98,7 +98,7 @@ def create_spectrogram_video(audio_file, output_video, n_fft=256, hop_length=64,
 # Main script
 def main():
     # Directories
-    input_files = glob.glob('../examples/dataset/*/*/scp.wav')
+    input_files = glob.glob('../examples/generation/*/input_audio.wav')
     begin_offset = 24000
     n_samples = int(48000 * 3)
 
