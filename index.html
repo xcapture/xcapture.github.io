@@ -19,6 +19,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400&family=Roboto:wght@300;400;700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.1.1/css/all.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="./ext/drift-basic.min.css">
 </head>
 
 <body class="light">
@@ -304,7 +305,7 @@
                         <div id="det-equal"><div>=</div></div>
                         <div>
                             <img class="results-det-img" id="results-detection-audio-image"
-                                src="./examples/detection/04_plate_table_P02_01/detection.jpg" />
+                                src="./examples/detection/04_plate_table_P02_01/detection.jpg" data-zoom="./examples/detection/04_plate_table_P02_01/detection.jpg" />
                         </div>
                     </div>
                 </div>
@@ -344,7 +345,7 @@
                     class="template-creator">Ryan Williams</a></div>
         </div>
     </div>
-
+    <script src="./ext/Drift.min.js"></script>
     <script>
         document.getElementById("color-mode-wrap").addEventListener("click", () => {
             document.body.classList.toggle("light");
@@ -461,6 +462,9 @@
             document.getElementById("results-detection").style.display = "block";
             document.getElementById("bar-text-tabs").style.left = "50%";
         });
+
+        new Drift(document.querySelector("#results-detection-audio-image"), {
+        })
 
     </script>
 </body>
