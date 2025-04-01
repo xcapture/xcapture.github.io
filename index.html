@@ -198,6 +198,118 @@
                 </div>
             </div>
         </div>
+        <div class="section" id="results">
+            <h2 class="section-title">Results</h2>
+            <div class="results-text-tabs-wrap">
+                <div id="results-gen-tab" class="results-text-tab">X-to 2D/3D Generation</div>
+                <div id="results-detection-tab" class="results-text-tab">Zero-Shot Audio-Based Detection</div>
+                <div class="bar bar-results" id="bar-text-tabs"></div>
+            </div>
+            <div id="results-generation">
+                <div class="demo-text">
+                    <span>Select an image below.</span>
+                </div>
+                <div class="results-gen-image-tabs">
+                    <div class="results-gen-image-wrap" id="gen-image-0">
+                        <img src="./examples/generation/90/input_image.png" />
+                        <div class="demo-img-overlay selected">glass tube</div>
+                    </div>
+                    <div class="results-gen-image-wrap" id="gen-image-1">
+                        <img src="./examples/generation/111/input_image.png" />
+                        <div class="demo-img-overlay">bottle opener</div>
+                    </div>
+                    <div class="results-gen-image-wrap" id="gen-image-2">
+                        <img src="./examples/generation/224/input_image.png" />
+                        <div class="demo-img-overlay">watch</div>
+                    </div>
+                    <div class="results-gen-image-wrap" id="gen-image-3">
+                        <img src="./examples/generation/373/input_image.png" />
+                        <div class="demo-img-overlay">key fob</div>
+                    </div>
+                    <div class="bar bar-gen-images" id="bar-generation"></div>
+                </div>
+                <div class="results-gen-grid">
+                    <div class="results-grid-row">
+                        <div class="grid-item">Input</div>
+                        <div class="grid-item">Shap-E</div>
+                        <div class="grid-item">Stable Diffusion</div>
+                    </div>
+                    <div class="results-grid-row">
+                        <div class="grid-item">
+                            <img src="./examples/generation/90/input_image.png">
+                            <div class="demo-rgb-text demo-text-overlay">rgb</div>
+                        </div>
+                        <div class="grid-item">
+                            <img src="./examples/generation/90/image_mesh.gif">
+                        </div>
+                        <div class="grid-item">
+                            <img src="./examples/generation/90/image_image.png">
+                        </div>
+                    </div>
+                    <div class="results-grid-row">
+                        <div class="grid-item">
+                            <video src="./examples/generation/90/input_audio.mp4" controls></video>
+                            <div class="demo-audio-text demo-text-overlay">audio</div>
+                        </div>
+                        <div class="grid-item">
+                            <img src="./examples/generation/90/audio_mesh.gif">
+
+                        </div>
+                        <div class="grid-item">
+                            <img src="./examples/generation/90/audio_image.png">
+                        </div>
+                    </div>
+                    <div class="results-grid-row">
+                        <div class="grid-item">
+                            <img src="./examples/generation/90/input_tactile.png">
+                            <div class="demo-touch-text demo-text-overlay">touch</div>
+                        </div>
+                        <div class="grid-item">
+                            <img src="./examples/generation/90/tactile_mesh.gif">
+                        </div>
+                        <div class="grid-item">
+                            <img src="./examples/generation/90/tactile_image.png">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="results-detection">
+                <div class="demo-text">
+                    <span>Select an image below.</span>
+                </div>
+                <div class="results-det-image-tabs">
+                    <div class="results-det-image-wrap" id="det-image-0">
+                        <img src="./examples/detection/04_plate_table_P02_01/frame.jpg" />
+                    </div>
+                    <div class="results-det-image-wrap" id="det-image-1">
+                        <img src="./examples/detection/05_plate_knife_P01_102/frame.jpg" />
+                    </div>
+                    <div class="results-det-image-wrap" id="det-image-2">
+                        <img src="./examples/detection/06_pan_pot_P01_07/frame.jpg" />
+                    </div>
+                    <div class="bar bar-det-images" id="bar-detection"></div>
+                </div>
+                <div class="results-detection-page">
+                    <div class="results-detection-page-column">
+                        <div>
+                            <img class="results-det-img" src="./examples/detection/04_plate_table_P02_01/frame.jpg" />
+                        </div>
+                        <div id="det-plus"><div>+</div></div>
+                        <div>
+                            <video class="results-det-img" id="results-det-audio"
+                                src="./examples/detection/04_plate_table_P02_01/input_audio.mp4" controls></video>
+                        </div>
+                    </div>
+                    <div class="results-detection-page-column">
+                        <div id="det-equal"><div>=</div></div>
+                        <div>
+                            <img class="results-det-img" id="results-detection-audio-image"
+                                src="./examples/detection/04_plate_table_P02_01/detection.jpg" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
         <div class="section" id="data-collection">
             <h2 class="section-title">Hardware</h2>
             <video height="300" autoplay loop muted controls>
@@ -295,13 +407,60 @@
             bar_short.style.left = (data_point_id * (100 / 6)) + '%';
         }
 
+        const genImageClicked = (img_id, e) => {
+            folder_ids = ["90", "111", "224", "373"];
+            const grid_item_imgs = document.querySelectorAll('.grid-item img');
+            grid_item_imgs.forEach((img_el, img_ndx) => {
+                img_el.src = img_el.src.replace(/\/\d+\//, `/${folder_ids[img_id]}/`);
+            });
+
+            const grid_item_videos = document.querySelectorAll('.grid-item video');
+            grid_item_videos.forEach((video_el, img_ndx) => {
+                video_el.src = video_el.src.replace(/\/\d+\//, `/${folder_ids[img_id]}/`);
+            });
+
+            document.querySelector(".results-gen-image-wrap>.demo-img-overlay.selected").classList.remove('selected');
+            document.getElementById(`gen-image-${img_id}`).querySelector('.demo-img-overlay').classList.add('selected');
+
+            document.getElementById("bar-generation").style.left = (img_id * 25) + '%';
+        }
+
+        const detImageClicked = (img_id, e) => {
+            folders = ["04_plate_table_P02_01", "05_plate_knife_P01_102", "06_pan_pot_P01_07"];
+            document.querySelectorAll(".results-det-img").forEach((img_el, img_ndx) => {
+                img_el.src = img_el.src.replace(/\d{2}_.*\//, `${folders[img_id]}/`);
+            });
+
+            document.getElementById("bar-detection").style.left = (img_id * (100/3)) + '%';
+        }
+
         Array.from(document.getElementById('demo-selected-rgb-images').querySelectorAll("img")).forEach((img_el, img_ndx) => {
             img_el.addEventListener('click', dataPointClickedFn.bind(null, img_ndx));
         });
 
         img_ids.forEach(img_id => {
             document.getElementById(`obj-wrap-${img_id}`).addEventListener('click', objClickedFn.bind(null, img_id));
-        })
+        });
+
+        Array.from(document.getElementsByClassName('results-gen-image-wrap')).forEach((img_el, img_ndx) => {
+            img_el.addEventListener('click', genImageClicked.bind(null, img_ndx));
+        });
+
+        Array.from(document.getElementsByClassName('results-det-image-wrap')).forEach((img_el, img_ndx) => {
+            img_el.addEventListener('click', detImageClicked.bind(null, img_ndx));
+        });
+
+        document.getElementById("results-gen-tab").addEventListener('click', () => {
+            document.getElementById("results-generation").style.display = "block";
+            document.getElementById("results-detection").style.display = "none";
+            document.getElementById("bar-text-tabs").style.left = "0%";
+        });
+
+        document.getElementById("results-detection-tab").addEventListener('click', () => {
+            document.getElementById("results-generation").style.display = "none";
+            document.getElementById("results-detection").style.display = "block";
+            document.getElementById("bar-text-tabs").style.left = "50%";
+        });
 
     </script>
 </body>
