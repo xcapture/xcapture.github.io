@@ -204,7 +204,7 @@ h3 {
 
 .links {
     display: flex;
-    align-items: center;
+    align-items: top;
     justify-content: center;
     margin-bottom: 15px;
 }

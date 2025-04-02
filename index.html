@@ -81,17 +81,13 @@
                 </a>
             </div>
             <div class="link">
-                <a href="https://github.com/samuel-clarke/RealImpact" target="_blank" rel="noopener noreferrer">
                     <i class="link-icon fa-brands fa-github"></i>
-                    <div class="link-text">code</div>
-                </a>
+                    <div class="link-text">code<div style="font-size:12px">(coming soon)</div></div>
             </div>
-            <!-- <div class="link">
-                <a href="RealImpact_appendix.pdf" target="_blank" rel="noopener noreferrer">
-                <i class="link-icon fa-solid fa-file-lines"></i>
-                <div class="link-text">appendix</div>
-                </a>
-            </div> -->
+            <div class="link">
+                <i class="link-icon fa-solid fa-database"></i>
+                <div class="link-text">data<div style="font-size:12px">(coming soon)</div></div>
+            </div>
         </div>
         <div class="section" id="abstract">
             <h2 class="section-title">Abstract</h2>
@@ -118,6 +114,8 @@
         </div>
         <div class="section" id="demo">
             <h2 class="section-title">Dataset</h2>
+            <p class="abstract-text">A full release of our dataset is coming soon (contact <a href="https://samuelpclarke.com/">Samuel Clarke</a> for more information).
+            We include some samples below.</p>
             <div class="demo-text">
                 <span>Select an object to see examples of the data collected.</span>
             </div>
@@ -199,6 +197,19 @@
                 </div>
             </div>
         </div>
+        <div class="section" id="data-collection">
+            <h2 class="section-title">Hardware</h2>
+            <video height="300" autoplay loop muted controls>
+                <source src="./videos/CroppedTurntable2.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <p class="abstract-text">
+                We develop custom hardware to fit vision, touch, and audio sensing into a handheld package.
+                We will open-source all our designs soon. See our <a href="#video">video below</a> to see
+                a breakdown of the device hardware and see it in action. A full release of our hardware designs
+                is coming soon (contact <a href="https://samuelpclarke.com/">Samuel Clarke</a> for more information).</p>
+            </p>
+        </div>
         <div class="section" id="results">
             <h2 class="section-title">Results</h2>
             <div class="results-text-tabs-wrap">
@@ -231,9 +242,9 @@
                 </div>
                 <div class="results-gen-grid">
                     <div class="results-grid-row">
-                        <div class="grid-item">Input</div>
-                        <div class="grid-item">Shap-E</div>
-                        <div class="grid-item">Stable Diffusion</div>
+                        <div class="grid-item">Input (&rarr;Encoder)</div>
+                        <div class="grid-item">(Encoder&rarr;) Shap-E</div>
+                        <div class="grid-item">(Encoder&rarr;) Stable Diffusion</div>
                     </div>
                     <div class="results-grid-row">
                         <div class="grid-item">
@@ -311,21 +322,9 @@
                 </div>
             </div>
         </div>
-        <div class="section" id="data-collection">
-            <h2 class="section-title">Hardware</h2>
-            <video height="300" autoplay loop muted controls>
-                <source src="./videos/CroppedTurntable2.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-            <p class="abstract-text">
-                We develop custom hardware to fit vision, touch, and audio sensing into a handheld package.
-                We will open-source all our designs soon. See our <a href="#video">video below</a> to see
-                a breakdown of the device hardware and see it in action.
-            </p>
-        </div>
         <div class="section" id="video">
             <h2 class="section-title">Video</h2>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/3-z05p_azaQ"
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/MKEXB-TNoFs"
                 title="YouTube video player" frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 allowfullscreen class="video"></iframe>
@@ -333,15 +332,15 @@
 
         <div class="section" id="bibtex">
             <h2 class="section-title">BibTex</h2>
-            <pre id="citation">@inproceedings{clarke2023realimpact,
-    title={RealImpact: A Dataset of Impact Sound Fields for Real Objects},
-    author={Samuel Clarke and Ruohan Gao and Mason Wang and Mark Rau and Julia Xu and Jui-Hsien Wang and Doug L. James and Jiajun Wu},
-    booktitle={Proceedings of the IEEE International Conference on Computer Vision and Pattern Recognition},
-    year={2023}
+            <pre id="citation">@inproceedings{clarke2025xcapture,
+    title={X-Capture: An Open-Source Portable Device for Multi-Sensory Learning},
+    author={Samuel Clarke and Suzannah Wistreich and Yanjie Ze and Jiajun Wu},
+    booktitle={arXiv},
+    year={2025}
 }</pre>
         </div>
         <div id="footer">
-            <div class="footer-text">Template created by <a href="https://github.com/ryan-d-williams"
+            <div class="footer-text">Template and widgets created by <a href="https://github.com/ryan-d-williams"
                     class="template-creator">Ryan Williams</a></div>
         </div>
     </div>
