@@ -91,8 +91,10 @@
                     <div class="link-text">code<div style="font-size:12px">(coming soon)</div></div>
             </div>
             <div class="link">
-                <i class="link-icon fa-solid fa-database"></i>
-                <div class="link-text">data<div style="font-size:12px">(coming soon)</div></div>
+                <a href="https://downloads.cs.stanford.edu/viscam/XCapture/XCapture_data.zip" target="_blank" rel="noopener noreferrer">
+                    <i class="link-icon fa-solid fa-database"></i>
+                    <div class="link-text">data<div style="font-size:12px">(download)</div></div>
+                </a>
             </div>
         </div>
         <video height="250" style="margin-bottom:10px" autoplay loop muted>
@@ -113,7 +115,7 @@
                 With a <strong>build cost under $1,000, </strong>
                 X-Capture democratizes the creation of multi-sensory datasets, requiring only consumer-grade
                 tools for assembly.
-                Using X-Capture, we curate a sample <strong>dataset of 3,000 total points on 500
+                Using X-Capture, we curate a sample <strong>dataset of 3,600 total points on 600
                     everyday objects from diverse, real-world environments,</strong> offering both richness and variety.
                 Our experiments demonstrate the value of both the quantity and the sensory breadth of our data
                 for both pretraining and fine-tuning multi-modal representations for object-centric tasks such
@@ -124,8 +126,32 @@
         </div>
         <div class="section" id="data">
             <h2 class="section-title">Dataset</h2>
-            <p class="abstract-text">A full release of our dataset is coming soon (contact <a href="https://samuelpclarke.com/">Samuel Clarke</a> for more information).
-            We include some samples below.</p>
+            <div style="font-weight:600; font-size:1.1rem; text-align:left; margin-top:8px;">
+                About X-Capture
+            </div>
+            <p class="abstract-text">The X-Capture dataset contains multisensory data collected from <strong>600 real-world objects</strong> in <strong>nine in-the-wild environments</strong>. We provide <strong>RGB-D, acoustic, tactile,</strong> and  <strong>3D data</strong>. Each object has six recorded points each, covering diverse locations on the object.</p>
+            <div style="font-weight:600; font-size:1.1rem; text-align:left; margin-top:8px;">
+                Dataset Download
+            </div>
+            <p class="abstract-text">Use the following command to download the full dataset (~50GB uncompressed):</p>
+            <div style="
+                background:#f5f7ff;
+                padding:16px;
+                border-radius:8px;
+                font-size:0.95rem;
+                overflow-x:auto;
+                text-align:left;
+            ">
+            <pre style="margin:0;"><code style="color:#5f6687;">wget https://downloads.cs.stanford.edu/viscam/XCapture/XCapture_data.zip</code></pre>
+            </div>
+            <p class="abstract-text">
+                Alternatively, the dataset can be accessed 
+                <a href="https://downloads.cs.stanford.edu/viscam/XCapture/XCapture_data.zip" target="_blank">here</a>.
+              </p>
+            <div style="font-weight:600; font-size:1.1rem; text-align:left; margin-top:8px;">
+                Explore Samples
+            </div>
+            <p class="abstract-text">We include some samples from the X-Capture dataset below.</p>
             <div class="demo-text">
                 <span>Select an object to see examples of the data collected.</span>
             </div>
