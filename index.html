@@ -76,9 +76,15 @@
                 </div>
             </div>
         </div>
-        <div class="affiliation">
-            Stanford University
+        <div class="affiliation" style="margin-bottom:4px; padding-bottom:0;">
+            <span style="display:inline-flex; align-items:flex-start; margin-right:15px;">
+              <img src="media/SUSig-red.png" alt="Stanford" style="height:52px; margin-right:4px;">
+            </span>
+          </div>
+          <div class="venue" style="margin-top:0; margin-bottom:18px;">
+            <b>International Conference on Computer Vision (ICCV) 2025</b>
         </div>
+
         <div class="links">
             <div class="link">
                 <a href="https://arxiv.org/pdf/2504.02318" target="_blank" rel="noopener noreferrer">
@@ -87,14 +93,14 @@
                 </a>
             </div>
             <div class="link">
-                    <i class="link-icon fa-brands fa-github"></i>
-                    <div class="link-text">code<div style="font-size:12px">(coming soon)</div></div>
+                <a href="https://huggingface.co/datasets/swistreich/XCapture">
+                    <i class="link-icon fa-solid fa-database"></i>
+                    <div class="link-text">data</div>
+                </a>
             </div>
             <div class="link">
-                <a href="https://downloads.cs.stanford.edu/viscam/XCapture/XCapture_data.zip" target="_blank" rel="noopener noreferrer">
-                    <i class="link-icon fa-solid fa-database"></i>
-                    <div class="link-text">data<div style="font-size:12px">(download)</div></div>
-                </a>
+                    <i class="link-icon fa-brands fa-github"></i>
+                    <div class="link-text">code<div style="font-size:12px">(coming soon)</div></div>
             </div>
         </div>
         <video height="250" style="margin-bottom:10px" autoplay loop muted>
@@ -133,7 +139,7 @@
             <div style="font-weight:600; font-size:1.1rem; text-align:left; margin-top:8px;">
                 Dataset Download
             </div>
-            <p class="abstract-text">Use the following command to download the full dataset (~50GB uncompressed):</p>
+            <p class="abstract-text">We host our dataset on HuggingFace. Use the following command to download the full dataset (~50GB uncompressed):</p>
             <div style="
                 background:#f5f7ff;
                 padding:16px;
@@ -142,11 +148,11 @@
                 overflow-x:auto;
                 text-align:left;
             ">
-            <pre style="margin:0;"><code style="color:#5f6687;">wget https://downloads.cs.stanford.edu/viscam/XCapture/XCapture_data.zip</code></pre>
+            <pre style="margin:0;"><code style="color:#5f6687;">wget https://huggingface.co/datasets/swistreich/XCapture/resolve/main/XCapture_data.zip -O XCapture_data.zip</code></pre>
             </div>
             <p class="abstract-text">
                 Alternatively, the dataset can be accessed 
-                <a href="https://downloads.cs.stanford.edu/viscam/XCapture/XCapture_data.zip" target="_blank">here</a>.
+                <a href="https://huggingface.co/datasets/swistreich/XCapture/resolve/main/XCapture_data.zip" target="_blank">here</a>.
               </p>
             <div style="font-weight:600; font-size:1.1rem; text-align:left; margin-top:8px;">
                 Explore Samples
